@@ -17,11 +17,12 @@ def merge_sort(arr):
             merged_arr.append(high_arr[h])
             h += 1
 
+    # 나머지 남는 하나 더해주기
     merged_arr += low_arr[l:]
     merged_arr += high_arr[h:]
+
     return merged_arr
 
 
 unsorted_list = [3, 9, 5, 8, 4, 7, 0, 6, 1, 2]
-l1 = [2, 4, 3, 1]
-print(merge_sort(l1))
+print(merge_sort(unsorted_list))
