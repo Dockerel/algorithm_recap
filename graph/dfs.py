@@ -1,5 +1,3 @@
-from collections import deque
-
 graph = {
     1: [3, 4],
     2: [3, 4, 5],
@@ -11,16 +9,16 @@ graph = {
 root_node = 1
 
 
-def bfs(graph, root):
+def dfs(graph, root):
     visited = []
-    queue = deque([root])
+    stack = [root]
 
-    while queue:
-        n = queue.popleft()
+    while stack:
+        n = stack.pop()
         if n not in visited:
             visited.append(n)
-            queue.extend(list(set(graph[n]) - set(visited)))
+            stack.extend(list(set(graph[n]) - set(visited)))
     return visited
 
 
-print(bfs(graph, root_node))
+print(dfs(graph, root_node))

@@ -1,3 +1,4 @@
+q1
 https://leetcode.com/problems/merge-k-sorted-lists/submissions/
 
 22.12.01
