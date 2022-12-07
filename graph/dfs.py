@@ -17,7 +17,7 @@ def dfs(graph, root):
         n = stack.pop()
         if n not in visited:
             visited.append(n)
-            stack.extend(list(set(graph[n]) - set(visited)))
+            stack.extend(graph[n])
     return visited
 
 
